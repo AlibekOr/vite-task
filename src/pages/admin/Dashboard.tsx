@@ -1,8 +1,11 @@
 import {Box} from "@chakra-ui/react";
+import {Outlet} from 'react-router'
 
 function Dashboard() {
   return (
-    <Box>Dashboard</Box>
+    <Box>
+      <Outlet/>
+    </Box>
   )
 }
 
