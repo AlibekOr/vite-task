@@ -1,8 +1,8 @@
+import Login from "@/features/auth/Login.tsx";
+
 function App() {
   return (
-    <div >
-      hello world
-    </div>
+    <Login/>
   )
 }
 
