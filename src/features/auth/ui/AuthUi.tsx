@@ -85,7 +85,7 @@ export const AuthUi = (props: IProps) => {
                   w="full"
                   mt={4}
                 >
-                  Kirish
+                  Sig in
                 </Button>
               </Stack>
 

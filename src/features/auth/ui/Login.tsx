@@ -9,7 +9,6 @@ function Login() {
   const {handleSubmit, register, formState: {errors, isSubmitting}} = useForm<IUser>()
   const onSubmit = (e: IUser) => {
     mutation.mutate(e)
-
   }
 
   return (
