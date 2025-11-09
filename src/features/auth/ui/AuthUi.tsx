@@ -80,6 +80,7 @@ export const AuthUi = (props: IProps) => {
                   type="submit"
                   colorScheme="blue"
                   size="lg"
+                  colorPalette='teal'
                   fontSize="md"
                   loading={isSubmitting}
                   w="full"

@@ -8,6 +8,7 @@ import {router} from "@/routes/router.tsx";
 const queryClient = new QueryClient()
 
 function App() {
+
   return (
     <QueryClientProvider client={queryClient}>
       <ProviderRedux store={store}>

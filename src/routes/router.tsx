@@ -1,4 +1,4 @@
-import {createBrowserRouter, Navigate} from "react-router";
+import {createBrowserRouter, Navigate,} from "react-router";
 import {lazy} from "react";
 import Cookies from "js-cookie";
 
@@ -7,21 +7,27 @@ const Home = lazy(() => import('@/pages/user/Home'))
 const Login = lazy(() => import("@/features/auth/ui/Login"));
 const Dashboard = lazy(() => import('@/pages/admin/Dashboard.tsx'))
 const Stores = lazy(() => import('@/pages/Stores/Stores'))
+const Layout = lazy(() => import('@/layout/Layout.tsx'))
 const cookie = Cookies.get('Token')
-
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: cookie ? <Dashboard/> : <Navigate to={'/login'} replace={true}/>,
+    element: <Layout/>,
     children: [
       {
         path: '/',
-        element: <Home/>
-      },
-      {
-        path: '/stores',
-        element: <Stores/>
-      },
+        element: cookie ? <Dashboard/> : <Navigate to={'/login'} replace={true}/>,
+        children: [
+          {
+            path: '/',
+            element: <Home/>
+          },
+          {
+            path: '/stores',
+            element: <Stores/>
+          },
+        ]
+      }
     ]
   },
   {

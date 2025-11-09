@@ -4,6 +4,7 @@ import {SideBar} from "@/pages/admin/sideBar/SideBar.tsx";
 import {Header} from "@/pages/admin/header/Header.tsx";
 
 function Dashboard() {
+
   return (
     <Box bg="gray.900" minH="100vh" p={0}>
       <Grid
@@ -15,7 +16,7 @@ function Dashboard() {
         <GridItem borderRight="1px solid"
                   borderColor="#404040"
                   p={4} bg="gray.800" w={'100%'}>
-          <SideBar />
+          <SideBar/>
         </GridItem>
 
         {/* Main Content */}
@@ -27,7 +28,7 @@ function Dashboard() {
             {/* Header */}
             <GridItem borderBottom="1px solid" borderColor="#404040"
                       bg="gray.800" p={4}>
-              <Header />
+              <Header/>
             </GridItem>
             {/* Content */}
 
