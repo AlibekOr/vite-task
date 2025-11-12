@@ -1,11 +1,10 @@
 import {createBrowserRouter, Navigate,} from "react-router";
 import {lazy} from "react";
 import Cookies from "js-cookie";
+import {ProtectedRoute} from './ProtectedRoute.tsx'
 
 const isAuthenticated = () => !!Cookies.get('Token');
-const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
-    return isAuthenticated() ? children : <Navigate to="/login" replace />;
-};
+
 
 const Home = lazy(() => import('@/pages/user/Home'))
 const Login = lazy(() => import("@/features/auth/ui/Login"));
@@ -20,9 +19,10 @@ export const router = createBrowserRouter([
       {
         path: '/',
         element: (
-            <ProtectedRoute>
-                <Dashboard/>
-            </ProtectedRoute>
+          <ProtectedRoute>
+            <Dashboard/>
+          </ProtectedRoute>
+
         ),
         children: [
           {
@@ -36,10 +36,10 @@ export const router = createBrowserRouter([
         ]
       }
     ],
-      errorElement: <div>error!</div>
+    errorElement: <div>error!</div>
   },
   {
     path: "/login",
-    element:isAuthenticated() ? <Navigate to="/" replace /> : <Login />
+    element: isAuthenticated() ? <Navigate to="/" replace/> : <Login/>
   }
 ])
