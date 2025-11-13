@@ -1,7 +1,7 @@
 import {Outlet} from 'react-router'
 import {Box, Grid, GridItem} from '@chakra-ui/react';
-import {SideBar} from "@/pages/admin/sideBar/SideBar.tsx";
-import {Header} from "@/pages/admin/header/Header.tsx";
+import {SideBar} from "@/layout/admin/sideBar/SideBar.tsx";
+import {Header} from "@/layout/admin/header/Header.tsx";
 
 function Dashboard() {
 

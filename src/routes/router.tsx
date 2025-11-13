@@ -5,10 +5,9 @@ import {ProtectedRoute} from './ProtectedRoute.tsx'
 
 const isAuthenticated = () => !!Cookies.get('Token');
 
-
 const Home = lazy(() => import('@/pages/user/Home'))
 const Login = lazy(() => import("@/features/auth/ui/Login"));
-const Dashboard = lazy(() => import('@/pages/admin/Dashboard.tsx'))
+const Dashboard = lazy(() => import("@/layout/admin/Dashboard.tsx"))
 const Stores = lazy(() => import('@/pages/Stores/Stores'))
 const Layout = lazy(() => import('@/layout/Layout.tsx'))
 export const router = createBrowserRouter([

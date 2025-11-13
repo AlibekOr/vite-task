@@ -14,7 +14,7 @@ export const SideBar = () => {
             </Box>
 
             <Box>
-              <Text textStyle={'xl'} >Softium</Text>
+              <Text textStyle={'xl'} color={'#ffffff'}  fontWeight="600" fontFamily="mono" letterSpacing="1px" >Softium</Text>
             </Box>
 
           </Box>

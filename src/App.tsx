@@ -4,7 +4,7 @@ import {store} from "@/app/store/stor.ts";
 import {QueryClientProvider, QueryClient} from '@tanstack/react-query'
 import {RouterProvider} from "react-router";
 import {router} from "@/routes/router.tsx";
-
+import { ColorModeScript } from "@chakra-ui/color-mode";
 const queryClient = new QueryClient()
 
 function App() {
@@ -13,6 +13,8 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <ProviderRedux store={store}>
         <Provider>
+
+            <ColorModeScript initialColorMode="light" />
           <RouterProvider router={router}/>
         </Provider>
       </ProviderRedux>
