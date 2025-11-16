@@ -1,5 +1,6 @@
 import {Box, Image, Text} from "@chakra-ui/react"
 import logo from '@/assets/logo/Softium.jpeg'
+import {SideBarBtn} from "@/layout/admin/sideBar/SideBarBtn.tsx";
 
 export const SideBar = () => {
   return (
@@ -14,14 +15,18 @@ export const SideBar = () => {
             </Box>
 
             <Box>
-              <Text textStyle={'xl'} color={'#ffffff'}  fontWeight="600" fontFamily="mono" letterSpacing="1px" >Softium</Text>
+              <Text textStyle={'xl'} color={'#ffffff'} fontWeight="600"
+                    letterSpacing="1px" fontFamily={'Noto Serif'}>Softium</Text>
             </Box>
 
           </Box>
-          </Box>
+        </Box>
 
-        <Box>
-          hello
+        <Box paddingTop={'20px'}>
+
+          <Box color={'#959595'} fontWeight={500} fontSize={20} fontFamily={'Noto Serif'} >УПРАВЛЕНИЕ</Box>
+
+          <SideBarBtn/>
         </Box>
 
       </Box>

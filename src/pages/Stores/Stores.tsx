@@ -1,4 +1,4 @@
-import {StoresUi} from "@/features/Stores/ui/StoresUi.tsx";
+import {StoresUi} from "@/features/stores/ui/StoresUi.tsx";
 
 function Stores() {
   return (
